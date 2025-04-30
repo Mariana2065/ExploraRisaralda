@@ -1,8 +1,29 @@
+@font-face {
+    font-family: 'Yesterday';
+    src: url('../../../fuentes/Yesteryear-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../../../fuentes/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;   
+}
+@font-face {
+    font-family: 'Kyiv';
+    src: url('../../../fuentes/kyivtype-sans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/fondo_principal.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../../img/fondo-de-explora-risaralda.jpg);
     background-size: cover;
     margin: 0;
-    
+    font-family: 'Inter';
+
 }
 
 html, body {
@@ -30,10 +51,10 @@ nav {
 }
 
 .barra-superior .logo h1 {
-    font-size: 1.8em;
-    font-weight: bold;
+    font-size: 2.8em;
     color: #fff;
     text-decoration: none;
+    font-family: 'Yesterday';
 }
 
 .barra-superior .iconos a {
@@ -265,7 +286,7 @@ main {
   }
   
   .button-no {
-    background-color: #5cb85c;
+    background-color: #68A12F;
     color: white;
   }
   
