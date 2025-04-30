@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="css/favoritos_usuario.css">
+</head>
+<body>
+    <header>
+        <nav class="barra-superior">
+            <div class="logo">
+                <h1>Explora Risaralda</h1>
+            </div>
+            <div class="iconos">
+                <a href="#"><img src="C:\Users\giral\OneDrive\Escritorio\ExploraRisaralda Proyecto\ExploraRisaralda\img\Iconos\icons-búsqueda-header.png" alt="Buscar"></a>
+                <a href="#"><img src="C:\Users\giral\OneDrive\Escritorio\ExploraRisaralda Proyecto\ExploraRisaralda\img\Iconos\icons-mapa-header.png" alt="Mapa"></a>
+                <a href="#"><img src="C:\Users\giral\OneDrive\Escritorio\ExploraRisaralda Proyecto\ExploraRisaralda\img\Iconos\icon-campana-header.png" alt="Notificación"></a>
+                <a href="#"><img src="C:\Users\giral\OneDrive\Escritorio\ExploraRisaralda Proyecto\ExploraRisaralda\img\Iconos\usuario-header.png" alt="Perfil de usuario"></a>
+            </div>
+        </nav>
+    
+        <nav class="barra-inferior">
+            <ul class="menu-inferior">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Hospedaje</a></li>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Cosas para Hacer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="perfil-menu">
+                <div class="perfil-image">
+                    <span></span>
+                </div>
+                <p>Hola!</p>
+                <div class="perfil-options">
+                    <a href="./Perfil_usuario.html"><img src="C:\Users\giral\OneDrive\Escritorio\ExploraRisaralda Proyecto\ExploraRisaralda\img\Iconos\usuario-header.png">Perfil</a>
+                    <a href="./perfil_usuario_notificaciones.html"><img src="C:\Users\giral\OneDrive\Escritorio\ExploraRisaralda Proyecto\ExploraRisaralda\img\Iconos\icon-campana-header.png">Notificaciones</a>
+                    <a href="./perfil_usuario_favoritos.html"><img src="C:\Users\giral\OneDrive\Escritorio\ExploraRisaralda Proyecto\ExploraRisaralda\img\Iconos\corazon.png">Favoritos</a>
+                    <a href="./perfil_usuario_configuracion.html"><img src="C:\Users\giral\OneDrive\Escritorio\ExploraRisaralda Proyecto\ExploraRisaralda\img\Iconos\ajustes.png">Configuración</a>
+                    <a href="#" class="logout">Cerrar sesión<img src="C:\Users\giral\OneDrive\Escritorio\ExploraRisaralda Proyecto\ExploraRisaralda\img\Iconos\cerrar_sesión.png"></a>
+                </div>
+            </div>
+            
+
+            <div class="perfil-detalles">
+                <h1 class="main-title">Mis favoritos</h1>
+
+                <!-- Slider de Municipios -->
+                <div class="slider-section">
+                    <h2 class="slider-title">Municipios</h2>
+                    <div class="slider-container" id="municipios-slider">
+                        <div class="slider-wrapper">
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt="Pereira"></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt="Dosquebradas"></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt="Santa Rosa"></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt="Marsella"></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt="Quinchía"></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt="Belén de Umbría"></div>
+                        </div>
+                        <div class="slider-dots" id="municipios-dots"></div>
+                    </div>
+                </div>
+                
+                <!-- Slider de Cosas por hacer -->
+                <div class="slider-section">
+                    <h2 class="slider-title">Cosas por hacer</h2>
+                    <div class="slider-container" id="cosas-hacer-slider">
+                        <div class="slider-wrapper">
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                        </div>
+                        <div class="slider-dots" id="cosas-hacer-dots"></div>
+                    </div>
+                </div>
+
+                <!-- Slider de Hospedajes -->
+                <div class="slider-section">
+                    <h2 class="slider-title">Hospedajes</h2>
+                    <div class="slider-container" id="hospedajes-slider">
+                        <div class="slider-wrapper">
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                        </div>
+                        <div class="slider-dots" id="hospedajes-dots"></div>
+                    </div>
+                </div>
+
+                <!-- Slider de Restaurantes -->
+                <div class="slider-section">
+                    <h2 class="slider-title">Restaurantes</h2>
+                    <div class="slider-container" id="restaurantes-slider">
+                        <div class="slider-wrapper">
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                            <div class="slide"><img src="img/fondo_principal.jpg" alt=""></div>
+                        </div>
+                        <div class="slider-dots" id="restaurantes-dots"></div>
+                    </div>
+
+            </div>
+                    
+        </div>
+    </main>
+    
+    <footer class="footer">&copy; 2026 Explora Risaralda | Todo los derechos reservados.</footer>
+
+    <script type="text/javascript" src="js/main_usuario.js"></script>
+</body>
+</html>
+
+
+
+
