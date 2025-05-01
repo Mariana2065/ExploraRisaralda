@@ -52,7 +52,7 @@ nav {
 }
 
 .barra-superior .logo h1 {
-    font-size: 2.8em;
+    font-size: 3em;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
@@ -104,6 +104,8 @@ main {
     justify-content: center;
     align-items: center;
     height: 200%;
+    padding-bottom: 20px;
+
 }
 
 .container {
@@ -283,7 +285,6 @@ p{
 
 
 .footer{
-    position: fixed;
     bottom: 0;
     width: 100%;
     color: white;
