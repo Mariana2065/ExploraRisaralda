@@ -324,3 +324,33 @@ footer{
     backdrop-filter: blur(30px);  
     
 }
+
+/*ventana notificacion*/
+#notif-panel {
+    position: absolute;
+    top: 70px; /* ajusta según la posición de tu header */
+    right: 20px;
+    width: 300px;
+    border-radius: 15px;
+    background-color: rgba(72, 69, 69, 0.9);
+    box-shadow: 3px 3px 3px rgba(255, 254, 254, 0.5);
+    padding: 15px;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    color: #fff;
+  }
+  
+  #notif-panel.hidden {
+    display: none;
+  }
+  
+  #notif-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #notif-panel li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nevado Santa Isabel - Explora Risaralda</title>
+    <link rel="stylesheet" href="css/style_nevado.css">
+</head>
+<body>
+    <header>
+        <nav class="barra-superior">
+            <div class="logo">
+                <h1>Explora Risaralda</h1>
+            </div>
+            <div class="iconos">
+                <a href="#"><img src="../img/Iconos/icons-búsqueda-header.png" alt="Buscar"></a>
+                <a href="#"><img src="../img/Iconos/icons-mapa-header.png" alt="Mapa"></a>
+                <a href="#" id="notif-toggle"><img src="../img/Iconos/icon-campana-header.png" alt="Notificación"></a>
+                <a href="#"><img src="../img/Iconos/usuario-header.png" alt="Perfil de usuario"></a>
+            </div>
+        </nav>
+        
+        <nav class="barra-inferior">
+            <ul class="menu-inferior">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Hospedaje</a></li>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Cosas para hacer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="vista-detalle">
+                <div class="info-section">
+                    <h1 class="lugar-titulo">Nevado Santa Isabel</h1>
+                    <div class="calificacion">
+                        <span>Calificaciones: </span>
+                        <span class="estrellas">★★★★★</span>
+                    </div>
+                    
+                    <h2>Acerca de:</h2>
+                    <p class="descripcion">
+                        El Nevado de Santa Isabel, ubicado en el Parque Nacional Natural Los Nevados
+                        cerca de Pereira, es un imponente volcán inactivo que alcanza los 4.950 metros de
+                        altura. Con sus tres cumbres cubiertas de nieves perpetuas y glaciares, es un
+                        paraíso para aventureros y amantes de la naturaleza. Desde sus faldas nacen ríos
+                        cristalinos, y en días despejados, su vista desde Pereira es
+                        simplemente espectacular.
+                    </p>
+                    
+                    <div class="contacto-info">
+                        <p><strong>Dirección:</strong> Cra. 5 #16-19, Pereira, Risaralda.</p>
+                        <p><strong>Celular:</strong> 311 3737459.</p>
+                        
+                        <div class="redes-sociales">
+                            <p><strong>Redes Sociales:</strong></p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon facebook"></a>
+                                <a href="#" class="social-icon instagram"></a>
+                                <a href="#" class="social-icon twitter"></a>
+                            </div>
+                        </div>
+                        
+                        <button class="boton-llegar">Como llegar</button>
+                    </div>
+                </div>
+                
+                <div class="imagen-section">
+                    <div class="slider-container">
+                        <div class="slider-wrapper">
+                            <img src="../img/motañas.jpg" alt="Nevado Santa Isabel">
+                            <img src="../img/reservas.jpg" alt="Nevado Santa Isabel">
+                            <img src="../img/motañas.jpg" alt="Nevado Santa Isabel">
+                        </div>
+                    </div>
+                    <div class="imagen-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="acciones">
+                <button class="accion-btn favorito"></button>
+                <button class="accion-btn compartir"></button>
+                <button class="accion-btn comentar"></button>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">&copy; 2026 Explora Risaralda | Todos los derechos reservados.</footer>
+    
+
+    <!-- Contenedor de notificaciones -->
+    <div id="notif-panel" class="hidden">
+        <h4>Notificaciones</h4>
+        <ul>
+          <li>🌋 Nueva excursión al Nevado Santa Isabel</li>
+          <li>🚗 Ruta actualizada desde Pereira</li>
+        </ul>
+      </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

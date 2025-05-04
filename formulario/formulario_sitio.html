@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro del lugar</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+
+    <header>
+        <nav class="barra-superior">
+            <div class="logo">
+            <h1>Explora Risaralda</h1>
+            </div>
+            <div class="iconos">
+                <a href="#"><img src="../img/Iconos/icons-búsqueda-header.png" alt="Buscar"></a>
+                <a href="#"><img src="../img/Iconos/icons-mapa-header.png" alt="Mapa"></a>
+                <a href="#" id="notif-toggle"><img src="../img/Iconos/icon-campana-header.png" alt="Notificación"></a>
+                <a href="#"><img src="../img/Iconos/usuario-header.png" alt="Perfil de usuario"></a>
+            </div>
+        </nav>
+    
+        <nav class="barra-inferior">
+            <ul class="menu-inferior">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Hospedaje</a></li>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Cosas para Hacer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="vista-detalles">
+            <form action="/ruta-de-procesamiento" method="POST" enctype="multipart/form-data">
+                <h2>Registro de Lugar Ecoturístico</h2>
+            
+                <label for="nombreLugar">Nombre del Lugar Ecoturístico:</label><br>
+                <input type="text" id="nombreLugar" name="nombreLugar" required><br><br>
+            
+                <label for="nombreOperador">Nombre del Operador o Responsable:</label><br>
+                <input type="text" id="nombreOperador" name="nombreOperador" required><br><br>
+            
+                <label for="tipoLugar">Tipo de lugar:</label><br>
+                <input type="checkbox" name="tipoLugar" value="Restaurante"> Restaurante<br>
+                <input type="checkbox" name="tipoLugar" value="Hospedaje"> Hospedaje ecológico<br>
+                <input type="checkbox" name="tipoLugar" value="Parque"> Parque natural / Reserva<br>
+                <input type="checkbox" name="tipoLugar" value="Aventura"> Actividades de aventura<br>
+                <input type="checkbox" name="tipoLugar" value="Otro"> Otro: <input type="text" name="tipoOtro"><br><br>
+            
+                <label for="descripcion">Descripción del lugar:</label><br>
+                <textarea id="descripcion" name="descripcion" rows="5" cols="40" required></textarea><br><br>
+            
+                <label for="fotos">Fotografías del lugar (3 a 10):</label><br>
+                <input type="file" id="fotos" name="fotos[]" accept="image/*" multiple required><br><br>
+            
+                <label for="direccion">Dirección física:</label><br>
+                <input type="text" id="direccion" name="direccion" required><br><br>
+            
+                <label for="mapa">Ubicación en mapa (Google Maps):</label><br>
+                <input type="url" id="mapa" name="mapa" placeholder="https://goo.gl/maps/..."><br><br>
+            
+                <label>Redes sociales y contacto:</label><br>
+                Facebook: <input type="text" name="facebook"><br>
+                Instagram: <input type="text" name="instagram"><br>
+                Twitter: <input type="text" name="twitter"><br>
+                Teléfono: <input type="tel" name="telefono"><br><br>
+            
+                <label for="horarios">Horarios de atención:</label><br>
+                <input type="text" id="horarios" name="horarios"><br><br>
+            
+                <button type="submit">Enviar / Registrar Lugar</button>
+            </form>
+        </div>    
+    </div> 
+    
+    <footer class="footer">&copy; 2026 Explora Risaralda | Todo los derechos reservados.</footer>
+
+       <!-- Contenedor de notificaciones -->
+       <div id="notif-panel" class="hidden">
+        <h4>Notificaciones</h4>
+        <ul>
+          <li>🌋 Nueva excursión al Nevado Santa Isabel</li>
+          <li>🚗 Ruta actualizada desde Pereira</li>
+        </ul>
+      </div>
+
+    <script type="text/javascript" src="js/main_formulario.js"></script>    
+</body>
+</html>
