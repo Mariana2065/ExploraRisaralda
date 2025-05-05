@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="css/configuracion_usuario.css">
+</head>
+<body>
+    <header>
+        <nav class="barra-superior">
+            <div class="logo">
+                <h1>Explora Risaraldas</h1>
+            </div>
+            <div class="iconos">
+                <a href="#"><img src="../../img/Iconos/icons-búsqueda-header.png" alt="Buscar"></a>
+                <a href="#"><img src="../../img/Iconos/icons-mapa-header.png" alt="Mapa"></a>
+                <a href="#" id="notif-toggle"><img src="../../img/Iconos/icon-campana-header.png" alt="Notificación"></a>
+                <a href="#"><img src="../../img/Iconos/usuario-header.png" alt="Perfil de usuario"></a>
+            </div>
+        </nav>
+    
+        <nav class="barra-inferior">
+            <ul class="menu-inferior">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Hospedaje</a></li>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Cosas para Hacer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="perfil-menu">
+                <div class="perfil-image">
+                    <span></span>
+                </div>
+                <p>Hola!</p>
+                <div class="perfil-options">
+                    <a href="./Perfil_usuario.html"><img src="../../img/Iconos/usuario-header.png">Perfil</a>
+                    <a href="./perfil_usuario_notificaciones.html"><img src="../../img/Iconos/icon-campana-header.png">Notificaciones</a>
+                    <a href="./perfil_usuario_favoritos.html"><img src="../../img/Iconos/corazon.png">Favoritos</a>
+                    <a href="./perfil_usuario_configuracion.html"><img src="../../img/Iconos/ajustes.png">Configuración</a>
+                    <a href="#" class="logout">Cerrar sesión<img src="../../img/Iconos/cerrar_sesión.png"></a>
+                </div>
+            </div>
+            <div class="configuracion-container">
+                <div class="titulo">
+                    <h2>Configuracion</h2>
+                </div>
+                <a href=""><img src="../../img/Iconos/usuario-header.png">Centro de cuentas</a>
+                <a href=""><img src="../../img/Iconos/tiempo.png">Administrador de tiempo</a>
+                <a href=""><img src="../../img/Iconos/uso_datos.png">Uso de datos</a>
+                <a href=""><img src="../../img/Iconos/accesibilidad.png">Accesibilidad</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">&copy; 2026 Explora Risaralda | Todo los derechos reservados.</footer>
+
+
+    <!-- Contenedor de notificaciones -->
+    <div id="notif-panel" class="hidden">
+        <h4>Notificaciones</h4>
+        <ul>
+          <li>🌋 Nueva excursión al Nevado Santa Isabel</li>
+          <li>🚗 Ruta actualizada desde Pereira</li>
+        </ul>
+      </div>
+
+
+    <script type="text/javascript" src="js/main_usuario.js"></script>
+</body>
+</html>
