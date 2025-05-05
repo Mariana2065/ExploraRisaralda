@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora Risaralda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style-pag-principal.css">
+</head>
+<body>
+  <section class="principal" id="section-principal">
+    <video autoplay loop class="videoPrincipal" >
+      <source src="../img/video-pag-principal.mp4">
+    </video>
+    <header>
+      <nav class="barra-superior">
+          <div class="logo">
+              <h1>Explora Risaralda</h1>
+          </div>
+          <div class="iconos">
+              <a href="#" id="buscar-icono"><img src="../img/Iconos/búsqueda-header.png" alt="Buscar"></a>
+              <a href="#mapainteractivo"><img src="../img/Iconos/mapa-header.png" alt="Mapa"></a>
+              <a href="#"><img src="../img/Iconos/campana-header.png" alt="Notificación"></a>
+              <a href="#"><img src="../img/Iconos/usuario-header.png" alt="Perfil de usuario"></a>
+              
+          </div>
+      </nav>
+  
+      <nav class="barra-inferior">
+          <ul class="menu-inferior">
+              <li><a href="#section-principal">Inicio</a></li>
+              <li><a href="#">Hospedaje</a></li>
+              <li><a href="../gastronomia/restaurantes/index-restaurantes.html">Restaurantes</a></li>
+              <li><a href="#">Cosas para Hacer</a></li>
+          </ul>
+      </nav>
+  </header>
+  <a href="#section-carousel" class="flechaAbajo" >
+   <img src="../img/Iconos/flecha-Abajo.png" alt="Flecha abajo ">
+  </a>
+  </section>
+
+  <!--Section de información los recuadros blancos para el cambio de imagen -->      
+    <section class="datosRisaralda" >
+      <div class="informacion"> 
+        <div class="img-info"><img src="../img/img-info-cafe.jpg" alt="" class="imgInfoDates">
+        </div> 
+        <div class="titulosInfo"><h3 class="tituloVerdeInfo">Acerca de Risaralda</h3>
+        </div> 
+        <div class="columnaUno">
+          <p>El departamento de Risaralda tiene una extensión aproximada de 3.592 km2, lo que representa el 0,3% del área total del país. Está dividido en 14 municipios, de los cuales 10 se encuentran en la zona principal del PCCC.
+          </p>
+        </div> 
+        <div class="columnaDos">
+          <p>con mayor presencia del paisaje en los municipios de Apía, Belén de Umbría, Marsella, Santuario y Santa Rosa de Cabal. La zona de amortiguamiento incluye dos municipios.</p>
+        </div> 
+      </div>
+    </section>
+
+    <section class="carousel" id="section-carousel" >
+      <div id="carouselMunicipios" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <h2 class="section-titulos">Municipios de Risaralda</h2>
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="cards-wrapper">
+              <div class="card-item">
+                <img src="../img/Pereira_img_municipios.jpeg" alt="Pereira">
+                <div class="card-overlay">
+                  <h3>Pereira</h3>
+                  <button class="btn-conocer"><a href="../municipios/pereira/index-pereira.html">Conocer</a></button>
+                </div>
+              </div>
+              <div class="card-item">
+                <img src="../img/municipio_santuario.jpg" alt="Santuario">
+                <div class="card-overlay">
+                  <h3>Santuario</h3>
+                  <button class="btn-conocer">Conocer</button>
+                </div>
+              </div>
+              <div class="card-item">
+                <img src="../img/municipio_santaRosaCabal.jpg" alt="Santa Rosa">
+                <div class="card-overlay">
+                  <h3>Santa Rosa</h3>
+                  <button class="btn-conocer"><a href="../municipios/Santa-rosa/inde-santarosa.html">Conocer</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMunicipios" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMunicipios" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+        
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselMunicipios" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselMunicipios" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselMunicipios" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="datosRisaralda">
+      <div class="informacion"> 
+        <div class="img-info"><img src="../img/gastronomia-img-info.jpg" alt="" class="imgInfoDates">
+        </div> 
+        <div class="titulosInfo"><h3 class="tituloVerdeInfo">¡Descubre los sabores únicos de risaralda!</h3>
+        </div> 
+        <div class="columnaUno">
+          <p>Su gastronomía, fusión de tradición cafetera y sabores de montaña, ofrece deliciosas experiencias como el Sancocho Trifásico (res, cerdo y pollo), la arepa dulce con queso, y la Bandeja Risaraldense (con morcilla, chorizo y papa criolla).
+          </p>
+        </div> 
+        <div class="columnaDos">
+          <p>Prueba truchas frescas de río, achiras esponjosas, café de altura y postres como panelitas de leche, todo acompañado de refrescos naturales de lulo o guanábana. ¡Un festín que refleja la calidez de su gente y la riqueza de sus tierras!
+          </p>
+        </div> 
+      </div>
+    </section>
+    <!--Section Gastronomia-->
+    <section class="gastronomia" id="section-gastronomia" >
+    <h2 class="section-titulos">¿Listo un viaje gastronómico?</h2> 
+    <div class="containerCard">
+      <div class="cardOne">
+        <img src="../img/restaurante-Lapastora.png" alt="Restaurantes" class="imgTarjetas">
+        <div class="lineaVerde"></div>
+        <h4>La Pastora</h4>
+        <hr>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>Restaurante campestre con comida típica y hermosas vistas, perfecto para relajarse en la naturaleza.
+        </p>
+         <a href="../gastronomia/restaurantes/index-restaurantes.html" class="ir">Ir</a>
+      </div>
+
+      <div class="cardTwo">
+        <img src="../img/Ke sano!.jpg" alt="Cafeterias" class="imgTarjetas">
+        <div class="lineaVerde"></div>
+        <h4>Ke Sano! De la Huerta a la Mesa</h4>
+        <hr>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>Restaurante vegetariano con productos frescos de su huerta, ideal para comer saludable en un ambiente tranquilo.
+        </p>
+        <a href="../gastronomia/cafeterias/index-cafeterias.html" class="ir">Ir</a>
+      </div>
+  
+      <div class="cardThree">
+        <img src="../img/restarante yarumo.jpg" alt="bares" class="imgTarjetas">
+        <div class="lineaVerde"></div>
+        <h4>Yarumo Blanco</h4>
+        <hr>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p> Cocina tradicional con ingredientes orgánicos, atendido por mujeres locales en un entorno natural junto al río Otún.
+        </p>
+       <a href="../gastronomia/bares/index-bares.html" class="ir">Ir</a>
+      </div>
+    </div>
+    </div>  
+    </section>
+
+    <section class="datosRisaralda" >
+    <div class="informacion"> 
+      <div class="img-info"><img src="../img/img-loros.jpg" alt="" class="imgInfoDates">
+      </div> 
+      <div class="titulosInfo"><h3 class="tituloVerdeInfo">Risaralda: La Tierra de lo Inesperado</h3>
+      </div> 
+      <div class="columnaUno"><p>Descubre aguas termales que caen como cascadas calientes en Santa Rosa de Cabal, el glaciar del Nevado Santa Isabel (el "abuelo blanco") y el Bioparque Ukumarí. donde los animales viven sin jaulas. Maravíllate con pueblos como Marsella (lleno de esculturas de bronce)</p></div> 
+      <div class="columnaDos"><p>Mistrató (con 7 cascadas escondidas), prueba cacao indígena en Pueblo Rico y admira la única catedral sin torres de Colombia en Pereira.</p>
+       ¡No te pierdas el viaducto en forma de "Y" o la taza de café gigante donde puedes entrar!
+      </div> 
+    </div>
+  </section>
+      <!--section de actividades para hacer-->
+  <section class="cosasParaHacer" id="section-cosasParaHacer" >
+    <div class="containerCosasHacer">
+
+      <div class="grid-container">
+        <!--Añadiendo la imagen grande de la izquierda-->
+
+        <div class="grid-item large-left">
+          <img src="../img/senderismo.jpg" alt="Senderismo en Risaralda">
+          <div class="overlay">
+            <H3>SENDERISMO</H3>
+          </div>
+        </div>
+        
+        <!--Añadiendo imagen que va a en la derecha arriba-->
+        <div class="grid-item top-right">
+          <img src="../img/reservas.jpg" alt="Reservas de Risaralda">
+          <div class="overlay">
+            <h3>RESERVAS NATURALES</h3>
+          </div>
+        </div>
+        
+        <!--Añadiendo la imagen de abajo a la izquierda-->
+        
+          <div class="grid-item bottom-left">
+            <img src="../img/rios.jpg" alt="Rios en risaralda">
+            <div class="overlay">
+              <h3>RIOS</h3>
+            </div>
+          </div>
+       
+       
+
+        <!--Imagen abajo a la derecha-->
+        <div class="grid-item bottom-right">
+        <img src="../img/motañas.jpg" alt="Montañismo en Risaralda">
+        <div class="overlay">
+          <h3>MONTAÑAS</h3>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="datosRisaralda" >
+    <div class="informacion"> 
+      <div class="img-info"><img src="../img/img-info-mirador.jpg" alt="" class="imgInfoDates">
+      </div> 
+      <div class="titulosInfo"><h3 class="tituloVerdeInfo">Eco-Lujos entre Cafetales</h3>
+      </div> 
+      <div class="columnaUno">
+        <p>Descubre alojamientos sostenibles donde la naturaleza es protagonista: desde cabañas de bambú con huertas orgánicas hastaglamping de lujo con energía solar, todos diseñados para minimizar su impacto ambiental.
+        </p>
+      </div> 
+      <div class="columnaDos">
+        <p>Disfruta de experiencias únicas como baños con agua reciclada, senderos de conservación y desayunos con ingredientes cosechados en la finca. Dormir aquí no es solo descansar, es conectar con la tierra mientras apoyas el turismo responsable.
+        </p>
+      </div> 
+    </div>
+  </section>
+
+
+<section class="hospedajes" id="section-hospedajes" >
+  <h2 class="section-titulos">¡Descansa en armonía con la naturaleza!</h2>
+  <div class="container">
+
+    <!-- Glamping Card -->
+    <div class="card">
+        <div class=" card-img card-img-glamping"></div>
+            <div class="tituloCard">Glamping</div>
+            <div class="lineaBlanca"></div>
+        <div class="valoracion">
+              <p>⭐⭐⭐⭐⭐</p>
+              <p>"No solo se viene a dormir, se vive una experiencia única."</p>
+        </div>
+        <button class="irHospedaje">Ir</button>
+       </div>
+     
+    
+    
+    <!-- Hoteles Card -->
+    <div class="card">
+      <div class=" card-img card-img-hotel"></div>
+          <div class="tituloCard">Hoteles</div>
+          <div class="lineaBlanca"></div>
+      <div class="valoracion">
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>"No solo se viene a dormir, se vive una experiencia única."</p>
+      </div>
+      <button class="irHospedaje">Ir</button>
+     </div>
+    
+    <!--cabañas-->
+    <div class="card">
+      <div class=" card-img card-img-cabana"></div>
+          <div class="tituloCard">Cabañas</div>
+          <div class="lineaBlanca"></div>
+      <div class="valoracion">
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>"No solo se viene a dormir, se vive una experiencia única."</p>
+      </div>
+      <button class="irHospedaje">Ir</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="datosRisaralda" >
+  <div class="informacion"> 
+    <div class="img-info"><img src="../img/img-info-bandera.jpg" alt="" class="imgInfoDates">
+    </div> 
+    <div class="titulosInfo"><h3 class="tituloVerdeInfo">Deja que Risaralda te sorprenda... y que tú la protejas</h3>
+    </div> 
+    <div class="columnaUno">
+      <p>Risaralda es más que un destino, es un rencuentro con lo esencial. Aquí la naturaleza te abraza con sus montañas vestidas de café, sus ríos cristalinos y sus atardeceres dorados. Cada experiencia teje una conexión profunda con esta tierra y su gente, dejando huellas imborrables en el corazón.
+      </p>
+    </div> 
+    <div class="columnaDos">
+      <p>Viajar a Risaralda es un acto de amor por el planeta. Al elegir turismo sostenible, te conviertes en guardián de sus paisajes, apoyas a las comunidades locales y escribes una nueva historia de conservación. Este paraíso cafetero te espera para vivir una aventura auténtica donde cada momento celebra la vid
+      </p>
+    </div> 
+  </div>
+</section>
+<section class="mapa" id="mapainteractivo">
+  <h2 class="section-titulos">Explora Risaralda:
+    Tu Mapa Eco-Turístico Interactivo</h2>
+    <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3343.0755020608676!2d-75.68332540641138!3d4.836977333368029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3881a4b50bb31d%3A0x9150c2e299ed35b0!2sCDITI%20SENA%20Dosquebradas!5e0!3m2!1ses!2sco!4v1745509310048!5m2!1ses!2sco" width="900" height="500" style="border:0";allowfullscreen="" border-radius:25px;loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+</section>
+<!-- Contenedor de notificaciones -->
+<div id="notif-panel" class="hidden">
+  <h4>Notificaciones</h4>
+  <ul>
+    <li>🌋 Nueva excursión al Nevado Santa Isabel</li>
+    <li>🚗 Ruta actualizada desde Pereira</li>
+  </ul>
+</div>
+<footer>&copy;2026 Explora Risaralda | Todos los derechos reservados</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script src="./js/mainPagprincipal.js" ></script>
+</body>
+</html>

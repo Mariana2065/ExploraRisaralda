@@ -1,0 +1,715 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+html {
+  scroll-behavior: smooth;
+}
+
+/*Agrego la fuente cursiva yesterday*/
+@font-face {
+font-family: 'Yesterday';
+src: url('../../fuentes/Yesteryear-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fuentes/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+  @font-face {
+    font-family: 'Kyiv';
+    src: url('../../fuentes/kyivtype-sans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+/*Especifico las medidas de las secciones*/
+.principal,
+.gastronomia,
+.carousel,
+.cosasParaHacer,
+.hospedajes,
+.mapa {
+position: relative;
+width: 100%;
+height: auto;
+background-size: cover;
+background-position: center;
+position: relative;
+display: flex;
+align-items: center;
+z-index: 0;
+overflow: hidden;
+flex-direction: column; 
+justify-content: flex-start;
+}
+
+/*agrego el fondo con el filtro para oscurecer la imagen*/
+
+.gastronomia::before,
+.carousel::before,
+.cosasParaHacer::before,
+.hospedajes::before,
+.mapa::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('../../img/fondo-de-explora-risaralda.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+z-index: -1;
+}
+
+.principal header,
+.principal nav,
+.info,
+.Informacion3,
+.gastronomia,
+.cosasParaHacer,
+.hospedajes,
+.mapa,
+footer {
+z-index: 1;
+}
+header {
+  width: 100%;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.videoPrincipal{
+  height: 100vh;
+  object-fit: cover;
+  width: 100vw;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%; 
+}
+
+/* Barra superior */
+.barra-superior {
+  backdrop-filter: blur(30px);
+  height: 61px;}
+  
+
+
+.barra-superior .logo h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-family: yesterday;
+}
+
+.barra-superior .iconos a {
+  margin-left: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.barra-superior .iconos img {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+#buscar-icono img {
+  width: 28px;
+  height: 28px;
+  margin-left: 0;
+}
+
+/* Barra inferior */
+.barra-inferior {
+  background-color:transparent; 
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+  width: auto;
+  justify-content: end;
+
+}
+
+.barra-inferior ul {
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+}
+
+.barra-inferior li {
+  margin-right: 20px;
+ 
+  
+}
+
+.barra-inferior a {
+  color: #fff;
+  text-decoration: none; 
+  transition: text-decoration 0.3s ease-in-out;
+}
+.barra-inferior a:hover{
+  text-decoration: underline solid 2px;
+}
+
+/*Diseños de el espacio de secciones de información*/
+/*Sección blaca */
+.datosRisaralda{
+  background-color: white;
+  width:100%;
+  height:250px;
+}
+.informacion {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows:auto 1fr 1fr;
+  gap: 10px;
+}
+  
+.imginfo {
+  grid-column: 1 /2;
+  grid-row: 1/ 3;
+
+}
+.imgInfoDates{
+  width: 350px;
+  height: 250px;
+}
+.titulosInfo {
+  grid-column:  2 / 4;
+  grid-row:1 /2;
+  margin-top: 10px;
+  height: auto;
+  text-align: left;
+}
+.tituloVerdeInfo{
+font-family: Inter;
+color: #68A12F;
+margin-top: 15px;
+}
+.columnaUno {
+  grid-column: 2 ;
+  grid-row: 2 / 3;
+  margin-left: 8px;
+  
+}
+.columnaUno p{
+ margin-top: -11rem;
+ font-family: Kyiv;
+}
+
+.columnaDos {
+  grid-column: 3;
+  grid-row: 3/4;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.columnaDos p{
+  margin-top: -11.7rem;
+  font-family: Kyiv;
+}
+
+      
+/* Estilos para el carrusel */
+
+/* Contenedor de las tarjetas */
+.cards-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 30px;
+padding: 0 10%;
+height: 90vh;
+}
+
+/* Tarjetas individuales */
+.card-item {
+position: relative;
+width: 450px;
+height: 500px;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+transition: transform 0.3s ease;
+bottom: 40px;
+}
+
+.card-item:hover {
+transform: translateY(-10px);
+}
+
+.card-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Overlay con título y botón */
+.card-overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(to top, rgba(0,0,0,0.8) 20%, transparent 80%);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 20px;
+color: white;
+}
+
+.card-overlay h3 {
+font-size: 2rem;
+margin: 15px 0 0 0;
+text-align: center;
+color: white;
+}
+
+.btn-conocer {
+background: transparent;
+border: 2px solid white;
+color: white;
+padding: 8px 25px;
+border-radius: 30px;
+font-size: 1.2rem;
+cursor: pointer;
+transition: all 0.3s ease;
+margin-bottom: 7px;
+align-self: center;
+}
+
+.btn-conocer:hover {
+background: #68A12F;
+color: black;
+}
+.btn-conocer a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Controles del carrusel */
+.carousel-control-prev, 
+.carousel-control-next {
+width: 50px;
+height: 50px;
+background: rgba(0,0,0,0.5);
+border-radius: 50%;
+top: 60%;
+transform: translateY(-50%);
+opacity: 0.8;
+}
+
+.carousel-control-prev {
+left: 40px;
+}
+
+.carousel-control-next {
+right: 40px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+bottom: 0.5rem;
+}
+
+.carousel-indicators button {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: white;
+opacity: 0.5;
+margin: 0 5px;
+}
+
+.carousel-indicators button.active {
+opacity: 1;
+}
+h2{
+color: white;
+text-align: center;
+font-weight: bold;
+margin-top: 4rem;
+font-size: 3rem;
+}
+
+.section-titulos{
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  top: 0;
+  margin-top: 1rem;
+  margin-bottom: 30px;
+ 
+}
+.gastronomia{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.containerCard{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 90vh;
+}
+.cardOne,
+.cardTwo,
+.cardThree{
+  width: 26%;
+  height: 32.5rem;
+  background: linear-gradient(to top, rgba(7, 7, 7, 0.8) 20%, transparent 80%);
+  color: white;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  z-index: 2;
+}
+/*Tamaño y estilos de las tarjeats*/
+.imgTarjetas{
+  width: 100%;
+  height: 40%;
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+}
+.ir,
+.irRestaurante {
+  background-color: #68A12F;
+  border-radius: 25px;
+  width: 100px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  margin-top: 10px; 
+  margin-bottom: 13px; 
+}
+.ir,
+.irRestaurante a {
+  text-decoration: none;
+  color: white;
+
+}
+.cardOne p,
+.cardTwo p,
+.cardThree p{
+  font-size: 1.2rem;
+  margin: 0px 20px;
+}
+h4{
+  font-size: 1.8rem;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  margin-top: 25px;
+}
+.lineaVerde{
+  background-color: #68A12F;
+  height: 3px;
+  width: 80%;
+  margin: 0rem auto;
+  margin-bottom: -19px;
+  z-index: 4;
+}
+/*Grid de las imagenes de actividades para hacer*/
+.grid-container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 99%; 
+  height: 100vh; 
+  gap: 10px;
+  margin: 15px 15px;
+  margin-left: 7px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  cursor: pointer;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  transition: background 0.3s ease;
+}
+
+.overlay h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  transition: opacity 0.3s ease;
+}
+
+/*Posicion y tamaño de las imagenes*/
+.large-left {
+  grid-row: span 2;
+}
+
+.top-right {
+  grid-column: span 2;
+}
+
+.bottom-left {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.bottom-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.attribution {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.7rem;
+  text-align: right;
+  margin-top: 10px;
+}
+
+/*Hospedajes*/
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 2rem;
+}
+
+.card{
+  width: 300px;
+  height: 450px;
+  overflow:hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border-radius: 25px;
+
+}
+.card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.card-img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+.card-img-glamping {
+  background-image: url('../../img/glampingPrincipal.jpeg');
+}
+
+.card-img-hotel {
+  background-image: url('../../img/hotel-pagPrincipal.png');
+}
+
+.card-img-cabana {
+  background-image: url(../../img/cabana-principal.jpg);
+}
+
+.tituloCard,
+.lineaBlanca,
+.valoracion,
+.irHospedaje{
+  z-index: 1;
+}
+
+.tituloCard {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px black;
+  margin:1rem 1.2rem 0;
+  color: white;
+  position: absolute;
+  bottom: 12rem;
+  font-family: Inter;
+}
+.lineaBlanca{
+  height: 3px;
+  background-color: white;
+  width: 80%;
+  margin: 0.5rem 1.2rem;
+  position: absolute;
+  bottom: 11rem;
+}
+
+.valoracion {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px black;
+  bottom: 5rem;
+  left: 1.rem;
+  color: white;
+}
+
+
+
+.valoracion p {
+  margin: 0.2rem 1.2rem;
+  font-family: Kyiv;
+}
+
+.irHospedaje {
+  background-color: #68A12F;
+  border: none;
+  border-radius: 25px;
+  width: 100px;
+  height: 50px;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: -1.2rem 0.7rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+}
+
+.irHospedaje:hover {
+  background-color: #4f8126;
+}
+
+footer{
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  position:static;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  backdrop-filter: blur(30px);
+  display: flex;
+  background-image: url(../../img/fondo-de-explora-risaralda.jpg);
+  background-position: bottom center;
+
+}
+footer::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+footer::before{
+  backdrop-filter: blur(30px);
+  z-index: -1;
+}
+#map { 
+  justify-items: center;
+ }
+ .icono-abrir-modal {
+  width: 48px; 
+  height: 48px; 
+}
+.flechaAbajo,
+.flechaArriba{
+  position: absolute;
+  bottom: 30px;
+  transform: translateX(-50%);
+  color: white;
+  text-decoration: none;
+  z-index: 10;
+  background: transparent;
+  left: 50vw;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce{
+  0%, 20%, 50%, 80%, 100%{ transform: translateX(-50%) translateY(0);}
+  40%{transform:translateX(-50%) translateY(-10px);}
+  60%{transform: translateX(-50%) translateY(-5px);}
+}
+/*ventana notificacion*/
+#notif-panel {
+    position: absolute;
+    top: 70px; /* ajusta según la posición de tu header */
+    right: 20px;
+    width: 300px;
+    border-radius: 15px;
+    background-color: rgba(72, 69, 69, 0.9);
+    box-shadow: 3px 3px 3px rgba(255, 254, 254, 0.5);
+    padding: 15px;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    color: #fff;
+  }
+  
+  #notif-panel.hidden {
+    display: none;
+  }
+  
+  #notif-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #notif-panel li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
