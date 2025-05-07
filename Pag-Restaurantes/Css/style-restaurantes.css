@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } 
+  
+  /*Agrego la fuente cursiva yesterday*/
+  @font-face {
+    font-family: 'Yesterday';
+    src: url('../../fuentes/Yesteryear-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../../fuentes/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+   @font-face {
+    font-family: 'Kyiv';
+    src: url('../../fuentes/kyivtype-sans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    body{
+        position: relative;
+        width: 100%;
+       display: flex;  
+       flex-direction: column;
+       z-index: 0;
+       overflow-y: auto;
+
+    }
+    body::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
+        url(../../img/fondo-de-explora-risaralda.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+    header {
+        width: 100%;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+      
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        width: 100%; 
+      }
+      
+      /* Barra superior */
+      .barra-superior {
+        backdrop-filter: blur(30px);
+        height: 61px;}
+        
+      
+      
+      .barra-superior .logo h1 {
+        font-size: 3em;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        font-family: yesterday;
+      }
+      
+      .barra-superior .iconos a {
+        margin-left: 15px;
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      .barra-superior .iconos img {
+        width: 28px;
+        height: 28px;
+        vertical-align: middle;
+        margin-right: 15px;
+      }
+      
+      #buscar-icono img {
+        width: 28px;
+        height: 28px;
+        margin-left: 0;
+      }
+      
+      /* Barra inferior */
+      .barra-inferior {
+        background-color:transparent; 
+        padding: 10px 20px;
+       justify-content: flex-end;
+       align-items: center;
+      
+      }
+      
+      .barra-inferior ul {
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
+        display: flex; 
+      }
+      
+      .barra-inferior li {
+        margin-right: 20px;
+       
+        
+      }
+      
+      .barra-inferior a {
+        color: #fff;
+        text-decoration: none; 
+        transition: text-decoration 0.3s ease-in-out;
+      }
+      .barra-inferior a:hover{
+        text-decoration: underline solid 2px;
+      }
+  .barraDeBusquedad{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-end;
+  }
+  
+   input{
+    padding: 7px;
+    width: 16rem;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    margin-right: 5px;
+    background-color: rgba(0,0,0,0.5);
+    margin-left: 60rem;
+    margin-top: 1rem;
+    color: white;
+    font-family: Inter;
+  }
+  button{
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+   button img{
+    width: 30px;
+    height: 30px;
+  }
+  .tituloPrincipal{
+    width: 100%;
+    text-align:left;
+    padding-top: 90px;
+    font-family: Kyiv;
+    color: white;
+    margin-left: 5rem;
+  }
+  .lineaBlancaprincipal{
+    background-color: white;
+    height: 3px;
+    width: 22%;
+  }
+.ContenedorTarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 60%;
+    height:40%;
+    margin: 20px auto;
+    padding: 30px;
+}
+.tarjeta{
+  width: 100%;
+  height: 50%;
+   display: flex;
+   flex-direction: row;
+   border-radius: 25px;
+   overflow: hidden;
+   background-color: rgba(0,0,0,0.6);
+   color: white;
+   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+}
+.tarjeta img{
+  width: 400px;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.nombreCalificacion{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  flex-grow: 1;
+  align-items: flex-start;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.nombreCalificacion h3{
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 2rem;
+  font-family: Inter;
+  text-align: center;
+  margin-left: 20px;
+}
+.lineaBlanca{
+  height: 2px;
+  width: 90%;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.nombreCalificacion p{
+  color: white;
+  margin-left: 20px;
+  font-size: 1.2;
+  font-family: inter;
+}
+.ir{
+  position: relative;
+  background-color: #68A12F;
+  border-radius: 25px;
+  width: 90px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  font-family: Inter;
+  font-weight: 600;
+  margin-left: 230px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+}
+
+footer{
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  position:static;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  backdrop-filter: blur(30px);
+  display: flex;
+  background-image: url(../../img/fondo-de-explora-risaralda.jpg);
+  background-position: bottom center;
+
+}
+footer::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+footer::before{
+  backdrop-filter: blur(30px);
+  z-index: -1;
+}
